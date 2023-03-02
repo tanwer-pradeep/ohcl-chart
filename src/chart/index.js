@@ -19,7 +19,7 @@ const selectOptions = [
 const CandleChart = () => {
   const [apiData, setApiData] = useState([]);
   const [data, setData] = useState([]);
-  const [startTime, setStartTime] = useState(null);
+  const [startTime, setStartTime] = useState(new Date().setHours(new Date().getHours() - 1));
 
   const fetchApi = () =>{
     const baseUrl = "https://api-pub.bitfinex.com/v2/";
